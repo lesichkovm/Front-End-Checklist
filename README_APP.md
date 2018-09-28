@@ -9,8 +9,7 @@
 ## Table of Contents
 
 - [Install](#install)
-- [Install](#install)
-- [Add new translation](#addnewtranslation)
+- [Add new translation](#add-new-translation)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -31,7 +30,7 @@ To install and run, open a terminal and use the following commands:
 
 To add a new translation for the Front-End Checklist, you just need to translate the original JSON files in English to your own language.
 
-- [ ] Dupplicate `data/en` folder and change the name of the folder to:
+- [ ] Duplicate `data/en` folder and change the name of the folder to:
   * jp for Japanese
   * es for Spanish
   * cn for Chinese

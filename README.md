@@ -1,17 +1,41 @@
-[![Front-End Checklist Logo](https://github.com/thedaviddias/Front-End-Checklist/blob/master/src/img/banners/front-end-checklist-banner-light.jpg?raw=true)](https://frontendchecklist.io)
+<h1 align="center">
+<br>
+  <img src="https://raw.githubusercontent.com/thedaviddias/Front-End-Checklist/master/src/img/banners/logo-front-end-checklist.jpg" alt="Front-End Checklist" width="170">
+  <br>
+    <br>
+  Front-End Checklist
+  <br>
+</h1>
 
-<h2 align="center"><a href="https://frontendchecklist.io">Front-End Checklist</a></h2>
+<h4 align="center">The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.</h4>
 
 <p align="center">
-  <em>The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your site / HTML page to production.</em>
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  </a>
+    <a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg?style=flat-square" alt="Contributors">
+  </a>
+  <a href="https://spectrum.chat/front-end-checklist">
+    <img src="https://img.shields.io/badge/chat-on_spectrum-4837E2.svg?style=flat-square" alt="Spectrum">
+  </a>
+      <a href="https://github.com/thedaviddias/Front-End-Checklist/">
+    <img src="https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg?style=flat-square" alt="Front‑End_Checklist followed">
+</a>
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://img.shields.io/badge/license-CC0-green.svg?style=flat-square" alt="CC0">
+  </a>
 </p>
 
-[![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
-[![Backers on Open Collective](https://opencollective.com/front-end-checklist/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/front-end-checklist/sponsors/badge.svg)](#sponsors)
-[![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
-[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
-[![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+<p align="center">
+  <a href="#how-to-use">How To Use</a> • <a href="#contributing">Contributing</a> • <a href="http://feedback.frontendchecklist.io/">Roadmap</a> • <a href="https://frontendchecklist.io">Website</a> • <a href="https://www.producthunt.com/posts/front-end-checklist">Product Hunt</a>
+</p>
+<p align="center">
+    <span>Other Checklists:</span>
+    <br>
+  <a href="https://github.com/thedaviddias/Front-End-Performance-Checklist#---------front-end-performance-checklist-">🎮 Front-End Performance Checklist</a> • <a href="https://github.com/thedaviddias/Front-End-Design-Checklist#front-end-design-checklist">💎 Front-End Design Checklist</a>
+</p>
+
 
 It is based on Front-End developers' years of experience, with the additions coming from some other open-source checklists.
 
@@ -63,7 +87,7 @@ Some resources possess an emoticon to help you understand which type of content 
 
 > * 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*The next 3 meta tags (Charset, X-UA Compatible and Viewport) need to come first in the head.*
+*The next 2 meta tags (Charset and Viewport) need to come first in the head.*
 
 * [ ] **Charset:** ![High][high_img] The charset (UTF-8) is declared correctly.
 
@@ -71,15 +95,6 @@ Some resources possess an emoticon to help you understand which type of content 
 <!-- Set character encoding for the document -->
 <meta charset="utf-8">
 ```
-
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] The X-UA-Compatible meta tag is present.
-
-```html
-<!-- Instruct Internet Explorer to use its latest rendering engine -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-```
-
-> * 📖 [Specifying legacy document modes (Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
 * [ ] **Viewport:** ![High][high_img] The viewport is declared correctly.
 
@@ -278,7 +293,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 > * 🛠 [Dirty markup](https://dirtymarkup.com/)
 
-> * 🛠 [Sonar a linting tool for the web](https://sonarwhal.com/)
+> * 🛠 [webhint](https://webhint.io/)
 
 * [ ] **Link checker:** ![High][high_img] There are no broken links in my page, verify that you don't have any 404 error.
 
@@ -336,7 +351,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 <div id="id-used-by-cms" class="js-slider my-slider">
 ```
 
-* [ ] **embedded or inline CSS:** ![High][high_img] Avoid at all cost embeding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
+* [ ] **embedded or inline CSS:** ![High][high_img] Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
 * [ ] **Vendor prefixes:** ![High][high_img] CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
 
 > * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
@@ -354,6 +369,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/)
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
+> * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
 
 
@@ -400,7 +416,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 > * 🛠 Use [Kraken.io](https://kraken.io/web-interface) awesome alternative for both png and jpg optimization. Up to 1mb per files on free plan.
 > * 🛠 [TinyPNG](https://tinypng.com/) losslessly optimise png, apng (animated png) and jpg images. Free and paid version available.
 > * 🛠 [ZorroSVG](http://quasimondo.com/ZorroSVG/) jpg-like compression for transparent images using svg masking.
-> * 🛠 [SVGO](https://github.com/svg/svgo) a Nodejs-based tool for optimizing SVG vector graphics files. 
+> * 🛠 [SVGO](https://github.com/svg/svgo) a Nodejs-based tool for optimizing SVG vector graphics files.
 > * 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) a web-based GUI version of SVGO for optimising your svgs online.
 
 
@@ -447,7 +463,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Optimized and updated JS librairies:** ![Medium][medium_img] All JavaScript librairies used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their lastest version and don't overwhelm your JavaScript with unnecessary methods.
+* [ ] **Optimized and updated JS libraries:** ![Medium][medium_img] All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
 
 > * 📖 [You may not need jQuery](http://youmightnotneedjquery.com/)
 > * 📖 [Vanilla JavaScript for building powerful web applications](https://plainjs.com/)
@@ -476,7 +492,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ### Best practices
 
-* [ ] **HTTPS:** ![Medium][medium_img] HTTPS is used on every pages and for all external content (plugins, images...).
+* [ ] **HTTPS:** ![High][high_img] HTTPS is used on every pages and for all external content (plugins, images...).
 
 > * 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > * 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
@@ -521,7 +537,10 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ### Best practices
 
-- [ ] **Page weight:** ![High][high_img] The weight of each page is between 0 and 500 KB.
+- [ ] **Goals to achieve:** ![Medium][medium_img] Your pages should reach these goals:
+  - First Meaningful Paint under 1 second
+  - Time To Interactive under 5 seconds for the "average" configuration (a $200 Android on a slow 3G network with 400ms RTT and 400kbps transfer speed) and under 2 seconds for repeat visits
+  - Critical file size under 170Kb gzipped
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 🛠 [WebPageTest](https://www.webpagetest.org/)
@@ -604,15 +623,6 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 * [ ] **Headings:** ![High][high_img] Headings should be used properly and in the right order (H1 to H6).
 
 > * 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
-
-#### Landmarks
-
-- [ ] **Role banner:** ![High][high_img] `<header>` has `role="banner"`.
-- [ ] **Role navigation:** ![High][high_img] `<nav>` has `role="navigation"`.
-- [ ] **Role main:** ![High][high_img] `<main>` has `role="main"`.
-
-> * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
-> * 📖 [ARIA roles categorization](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
 
 ### Semantics
 
@@ -753,7 +763,7 @@ If you have any question or suggestion, don't hesitate to use Gitter or Twitter:
 
 ## Contributors
 
-This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
+This project exists thanks to all the people who contribute. [[Contribute]](.github/CONTRIBUTING.md).
 <a href="https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
 
 
@@ -778,8 +788,6 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/front-end-checklist/sponsor/7/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/7/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
-
-
 
 ## License
 

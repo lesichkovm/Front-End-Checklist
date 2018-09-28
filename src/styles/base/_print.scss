@@ -59,7 +59,7 @@
   }
 
   a[href^='http']::after {
-    content: ' < ' attr(href) ' > ';
+    content: initial;
   }
   $a: after &gt;
 
@@ -79,6 +79,8 @@
   }
 
   .c-checklist__body input {
+    height: auto !important;
+    top: 4px !important;
     opacity: 1 !important;
   }
 
@@ -90,6 +92,7 @@
   .c-tags,
   .c-github-corner,
   .s-header__media,
+  .s-header__lang,
   .img-logo,
   .s-content__filter,
   .s-content__search,
@@ -140,7 +143,7 @@
   }
 
   .sub-heading::after {
-    content: ' ★ Generated on http://frontendchecklist.com ★ ';
+    content: ' ★ Generated on http://frontendchecklist.io ★ ';
     white-space: pre;
   }
 
@@ -193,10 +196,5 @@
   .form input {
     font-size: 9pt !important;
     padding: 3px !important;
-  }
-
-  .c-checklist__body input {
-    height: auto !important;
-    top: 4px !important;
   }
 }

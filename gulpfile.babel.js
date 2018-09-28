@@ -13,6 +13,7 @@ import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
 import gcmq from 'gulp-group-css-media-queries';
+import stylelint from 'gulp-stylelint';
 const critical = require('critical').stream;
 
 import pug from 'gulp-pug';
@@ -113,20 +114,20 @@ gulp.task('pug-rebuild', ['compile-pug'], () => {
 	browserSync.reload();
 });
 
-// gulp.task('minify-html', () => {
-//   langs.forEach(lang => {
-//     return gulp.src(`./dist/index-en.html`)
-//       .pipe(htmlmin({
-//         collapseWhitespace: true,
-//         removeComments: true
-//       }))
-//       .pipe(rename({
-//         basename: 'index'
-//       }))
-//       // .pipe(gulpif(lang !== 'en', gulp.dest(`${dirs.dest}/${lang}`), gulp.dest(`${dirs.dest}`)))
-//       .pipe(gulp.dest(`${dirs.dest}`));
-//   })
-// });
+gulp.task('minify-html', () => {
+  langs.forEach(lang => {
+    return gulp.src(`./dist/index-en.html`)
+      .pipe(htmlmin({
+        collapseWhitespace: true,
+        removeComments: true
+      }))
+      .pipe(rename({
+        basename: 'index'
+      }))
+      // .pipe(gulpif(lang !== 'en', gulp.dest(`${dirs.dest}/${lang}`), gulp.dest(`${dirs.dest}`)))
+      .pipe(gulp.dest(`${dirs.dest}`));
+  })
+});
 
 gulp.task('compile-all-pug', () => {
   langs.forEach(lang => {
@@ -190,14 +191,10 @@ gulp.task('critical', () => {
   })
 });
 
-        // dest: '../.tmp/critical.min.css',
-
 gulp.task('lint-css', function lintCssTask() {
-  const gulpStylelint = require('gulp-stylelint');
-
   return gulp.src(dirs.src + '/styles/**/*.scss')
     .pipe(cached('css'))
-    .pipe(gulpStylelint({
+    .pipe(stylelint({
       reporters: [
         { formatter: 'string', console: true }
       ]
@@ -420,9 +417,8 @@ gulp.task('build', done => {
     ['compile-all-pug'],
     ['compile-styles', 'compress-images', 'webpack'],
     ['cdn'],
-    ['critical', 'copy'],
-
-    // ['clean-tmp'],
+    ['copy'],
+    ['minify-html'],
     done);
 });
 
